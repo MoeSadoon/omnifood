@@ -18,6 +18,16 @@ html {
 
     }
 
+    /* Clears the float property for the elements that use it */
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: ',';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* ------------------------------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ------------------------------------------------------------------- */
@@ -245,4 +255,55 @@ header {
 .meal-photo img:hover {
     opacity: 1;
     transform: scale(1.03);
+}
+
+/* ------------------------------------------------------------------- */
+/* HOW IT WORKS */
+/* ------------------------------------------------------------------- */
+
+.section-steps {
+    background-color: #F3F3F3;
+}
+
+.steps-box:first-child { /* ie the left one, ie the iphone image */
+    margin-top: 30px;    
+    text-align: right; /* Doesn't just work for text! Works for all inline elements, including images */
+    padding-right: 3%; /* using % instead of pixels to ensure fluid responsible design */
+}
+
+.steps-box:last-child {
+    margin-top: 70px;
+    padding-left: 3%;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step div { /* ie the number*/
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* to ensure it doesnt force a line break */
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.works-step:last-of-type { /* similar to last-child */
+    margin-bottom: 80px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
