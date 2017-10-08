@@ -397,3 +397,65 @@ cite img {
     margin-right: 10px;
     vertical-align: middle;
 }
+
+/* ------------------------------------------------------------------- */
+/* SECTION PLANS */
+/* ------------------------------------------------------------------- */
+
+.section-plans {
+    background-color: #F3F3F3;
+}
+
+.plan-box {
+    background-color: #fff;
+    border-radius: 5px; /* gives corners more round edges */
+    width: 90%; /* so not enitre width of parent element, ie col span-1-of-3 */
+    margin-left: 5%; /* ie half of the remaining 10% from the width, this is to centre it */
+    /* x offset, y offset, blur, colour */
+    box-shadow: 0 2px 2px #efefef;
+}
+
+
+.plan-box div:first-child {
+    background-color: #F7F7F7;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Just another way to select button, which is the last child of the div */
+.plan-box div:last-child {
+    text-align: center;
+    border: 0; /* So we don't get that bottom grey border */
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #EBE9E9
+}
+
+.plan-price {
+    font-size: 300%;
+    font-weight: 100; /* This was again made available by the options we provided with the google font we've included */
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+.plan-price span {
+    /* NOTE: Because span is a child element of the plan-price div,
+     it'll do 30% of ITS font size, not 30% of the html font size we've set as 20px earlier */
+     font-size: 30%;
+     font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    /* padding at top and bottom of list items and none at sides*/
+    padding: 5px 0;
+}
