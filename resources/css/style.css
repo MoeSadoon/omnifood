@@ -149,7 +149,7 @@ a:hover, a:active {
 /* BUTTONS */
 /* ------------------------------------------------------------------- */
 
-.btn:link, btn:visited {
+.btn:link, btn:visited, input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -159,7 +159,7 @@ a:hover, a:active {
 }
 
 
-.btn-full:link, .btn-full:visited {
+.btn-full:link, .btn-full:visited, input[type=submit] {
     background-color: #e67e22;
     border: 1px solid #e67e22;   
     color: #fff;  
@@ -172,11 +172,11 @@ a:hover, a:active {
     
 }
 
-.btn:hover, btn:active {
+.btn:hover, btn:active, input[type=submit]:hover, input[type=submit]:active {
     background-color: #cf6d17;
 }
 
-.btn-full:hover, .btn-full:active {
+.btn-full:hover, .btn-full:active, input[type=submit] {
     border: 1px solid #cf6d17;   
 }
 
@@ -458,4 +458,37 @@ cite img {
 .plan-box ul li {
     /* padding at top and bottom of list items and none at sides*/
     padding: 5px 0;
+}
+
+/* ------------------------------------------------------------------- */
+/* CONTACT FORM */
+/* ------------------------------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    /* Another way of centering contact corm inside parent element */
+    margin: 0 auto;
+}
+
+input[type=text], input[type=email], select, textarea {
+    /* So they fill the whole column: */
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+/* Gets rid of all  */
+
+*:focus {
+    outline: none;
 }
