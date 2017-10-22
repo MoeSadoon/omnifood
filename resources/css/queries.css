@@ -20,15 +20,85 @@
         margin-left: 10%; /* Because 10% left and 10% right, along with the 80% width above, makes it 100%, so it should center this paragraph*/
     }
 
+    .steps-box { margin-top: 10px; }
+
+    .steps-box:last-child { margin-top: 10px;}
+
+    .works-step { margin-bottom: 40px; }
+
+    .works-step:last-of-type { margin-bottom: 80px; }
+
+    .app-screen { width: 50%; }
+
+    .icon-small { 
+        width: 17px;
+        margin-right: 5px;
+     }
+
+    .city-feature { font-size: 90%; }
+
+    .plan-box {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .plan-price { font-size: 250%; }
+
+    .contact-form { width: 80%; }
+
 }
 
 
 /* Small phoes to phablets*, ie 481px to 767px */
 @media only screen and (max-width: 767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
 
+    .row, .hero-text-box { padding: 0 4%; }
+
+    /* This means columns will be stacked ontop of each other instead of side by side */
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+
+    /* Hide in mobile view since it'll be swapped for a dropdown */
+    .main-nav { display: none; }
+
+    h1 { font-size: 180%; }
+    h2 { font-size: 150% }
+
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    /* Center the iphone image in mobile view */
+    .steps-box:first-child { 
+        text-align: center; /* Doesn't just work for text! Works for all inline elements, including images */
+    }
+
+    .app-screen {
+        width: 40%;
+    }
+
+    .works-step { margin-bottom: 20px; }
+    
+    .works-step:last-of-type { margin-bottom: 20px; }
+
+    .works-step div { /* ie the number*/
+  
+        height: 40px;
+        width: 40px;
+        padding: 5px;
+        margin-right: 4px;
+        font-size: 120%;
+    }
 }
 
 /* Screen dimension for small smartphones */
  @media only screen and (max-width: 480px) {
+     section { padding: 25px 0; }
+    .contact-form { width: 100%; }
 
  }
