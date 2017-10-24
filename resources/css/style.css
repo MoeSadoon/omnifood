@@ -266,7 +266,8 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 2px #efefef;
+    -webkit-box-shadow: 0 2px 2px #efefef;
+            box-shadow: 0 2px 2px #efefef;
     /* Ensures sticky element is ontop of all other elements because it has highest possible value os 9999 */
     z-index: 9999;
 }
@@ -626,3 +627,23 @@ footer p {
     margin-top: 20px;
 }
 
+/* ------------------------------------------------------------------- */
+/* ANIMATIONS */
+/* ------------------------------------------------------------------- */
+
+/* This makes it opaque allowing the fade in animation to work */
+/* Note how wp-4 is not included in fade animation since it has a pulsing effect */
+.js--wp-1, .js--wp-2, .js--wp-3 {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-1.animated, .js--wp-2.animated, .js--wp-3.animated, {
+    opacity: 1;
+}
