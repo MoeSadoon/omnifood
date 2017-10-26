@@ -76,6 +76,7 @@ $(document).ready(function () {
     });
 
     //Cities
+    
     $('.js--wp-3').waypoint(function (direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
@@ -87,6 +88,25 @@ $(document).ready(function () {
         $('.js--wp-4').addClass('animated pulse');
     }, {
         offset: '50%'
+    });
+
+    // Mobile nav
+    $('.js--nav-icon').click(function () {
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon i');
+        
+        // Opens/closes a box in 200ms
+        nav.slideToggle(200);
+
+        //Switches icon to 'X' when open
+        if(icon.hasClass('ion-navicon-round')) {
+            icon.removeClass('ion-navicon-round');
+            icon.addClass('ion-close-round');    
+        } 
+        else {
+            icon.removeClass('ion-close-round');
+            icon.addClass('ion-navicon-round');    
+        }
     });
 });
 
